@@ -106,6 +106,15 @@ public class EnterspeedCommercetoolsConfiguration
         return this;
     }
 
+    internal Type EnterspeedImageMapper { get; private set; } = typeof(EnterspeedImageMapper);
+
+    public EnterspeedCommercetoolsConfiguration SetImageMapper<T>()
+        where T : IMapper<List<IImage>, IEnterspeedProperty>
+    {
+        EnterspeedImageMapper = typeof(T);
+        return this;
+    }
+
     #endregion
 
     #region Configurations

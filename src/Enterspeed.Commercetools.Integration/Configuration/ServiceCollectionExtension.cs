@@ -50,6 +50,7 @@ public static class ServiceCollectionExtension
         services.AddTransient(typeof(IMapper<IProductVariantAvailability, IEnterspeedProperty>), configModel.EnterspeedAvailabilityMapper);
         services.AddTransient(typeof(IMapper<DateTime, IEnterspeedProperty>), configModel.EnterspeedDateTimeMapper);
         services.AddTransient(typeof(IMapper<List<IPrice>, IEnterspeedProperty>), configModel.EnterspeedPriceMapper);
+        services.AddTransient(typeof(IMapper<List<IImage>, IEnterspeedProperty>), configModel.EnterspeedImageMapper);
 
         //Services
         services.AddScoped(typeof(IEnterspeedEntityTypeProvider), configModel.EnterspeedEntityTypeProvider);
